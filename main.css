@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body {
+  background: #212529;
+  font: 400 16px/1.4 'Roboto', sans-serif;
+  letter-spacing: .12em;
+}
+
+.wrapper {
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 60vh;
+  height: 53vh;
+  position: absolute;
+  margin: auto;
+}
+
+.directions {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 2rem;
+}
+
+.directions .message {
+  padding: .25rem;
+  -webkit-animation: text-highlight 16000ms infinite;
+          animation: text-highlight 16000ms infinite;
+  color: #dee2e6;
+  opacity: .3;
+}
+
+.directions .message:nth-child(2) {
+  -webkit-animation-delay: 4000ms;
+          animation-delay: 4000ms;
+}
+
+.directions .message:nth-child(3) {
+  -webkit-animation-delay: 8000ms;
+          animation-delay: 8000ms;
+}
+
+.directions .message:nth-child(4) {
+  -webkit-animation-delay: 12000ms;
+          animation-delay: 12000ms;
+}
+
+.timer {
+  position: relative;
+  overflow: hidden;
+  border-radius: .5rem;
+  height: 10%;
+  background: #6c757d;
+}
+
+.timer:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-animation: timer 32000ms linear infinite;
+          animation: timer 32000ms linear infinite;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  background: #495057;
+  z-index: 0;
+}
+
+.timer.inhale {
+  left: 20%;
+  width: 60%;
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+
+.timer.inhale-hold {
+  position: absolute;
+  width: 60%;
+  right: 25%;
+  bottom: 20%;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+
+.timer.inhale-hold:after {
+  -webkit-animation-delay: 4000ms;
+          animation-delay: 4000ms;
+}
+
+.timer.exhale {
+  position: absolute;
+  width: 60%;
+  left: 20%;
+  bottom: 8%;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.timer.exhale:after {
+  -webkit-animation-delay: 8000ms;
+          animation-delay: 8000ms;
+}
+
+.timer.exhale-hold {
+  position: absolute;
+  width: 60%;
+  left: 25%;
+  bottom: 20%;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
+.timer.exhale-hold:after {
+  -webkit-animation-delay: 12000ms;
+          animation-delay: 12000ms;
+}
+
+.timer .indicators {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+.timer .indicator {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  display: block;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border: 1px solid #212529;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@-webkit-keyframes timer {
+  10%, 50% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  60%, 100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+@keyframes timer {
+  10%, 50% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  60%, 100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+@-webkit-keyframes text-highlight {
+  2%, 25% {
+    color: #dee2e6;
+    opacity: 1;
+    font-weight: 600;
+  }
+  28%, 100% {
+    color: #dee2e6;
+    opacity: .3;
+  }
+}
+
+@keyframes text-highlight {
+  2%, 25% {
+    color: #dee2e6;
+    opacity: 1;
+    font-weight: 600;
+  }
+  28%, 100% {
+    color: #dee2e6;
+    opacity: .3;
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+  font-family: "Lato", sans-serif;
+  font-size: 0.7em;
+}
+
+footer p {
+  letter-spacing: 3px;
+  color: #EF2F3C;
+}
