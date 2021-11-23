@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 body {
-  background: #212529;
+  background: #03071e;
   font: 400 16px/1.4 'Roboto', sans-serif;
   letter-spacing: .12em;
 }
@@ -31,7 +31,7 @@ body {
   padding: .25rem;
   -webkit-animation: text-highlight 16000ms infinite;
           animation: text-highlight 16000ms infinite;
-  color: #dee2e6;
+  color: #560bad;
   opacity: .3;
 }
 
@@ -55,7 +55,7 @@ body {
   overflow: hidden;
   border-radius: .5rem;
   height: 10%;
-  background: #6c757d;
+  background: #480ca8;
 }
 
 .timer:after {
@@ -73,7 +73,7 @@ body {
           animation: timer 32000ms linear infinite;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  background: #495057;
+  background: #3a0ca3;
   z-index: 0;
 }
 
@@ -145,7 +145,7 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  border: 1px solid #212529;
+  border: 1px solid #03071e;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -174,24 +174,24 @@ body {
 
 @-webkit-keyframes text-highlight {
   2%, 25% {
-    color: #dee2e6;
+    color: #560bad;
     opacity: 1;
     font-weight: 600;
   }
   28%, 100% {
-    color: #dee2e6;
+    color: #560bad;
     opacity: .3;
   }
 }
 
 @keyframes text-highlight {
   2%, 25% {
-    color: #dee2e6;
+    color: #560bad;
     opacity: 1;
     font-weight: 600;
   }
   28%, 100% {
-    color: #dee2e6;
+    color: #560bad;
     opacity: .3;
   }
 }
